@@ -1,0 +1,26 @@
+{
+  "name": "player-workshop",
+  "version": "1.0.0",
+  "description": "A few material to illustrate a Dailymotion player workshop",
+  "main": "index.html",
+  "watch": {
+    "test": "*.{js,html,css}"
+  },
+  "scripts": {
+    "live-reload": "live-reload --port 8001 ./",
+    "open": "opener http://localhost:8002/",
+    "serve": "http-server -p 8002 .",
+    "start": "npm run open && parallelshell 'npm run live-reload -s' 'npm run serve -s' 'npm run watch -s'",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "watch": "npm-watch"
+  },
+  "author": "Olivier Audard <olivier.audard@dailymotion.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "live-reload": "^1.1.0",
+    "npm-watch": "^0.1.6",
+    "opener": "^1.4.1",
+    "parallelshell": "^2.0.0"
+  }
+}
