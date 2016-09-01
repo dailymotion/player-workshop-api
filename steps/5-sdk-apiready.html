@@ -15,8 +15,6 @@
   <main>
     <div id='player'></div>
     <br>
-    <button disabled data-method="play">play</button>
-    <button disabled data-method="pause">pause</button>
 
     <script src='https://api.dmcdn.net/all.js' async></script>
     <script>
@@ -26,31 +24,19 @@
           width  : '560',
           height : '315',
           params : {
-            'autoplay' : true,
+            'autoplay' : false,
             'ui-theme' : 'light',
             'ui-logo'  : false,
           }
         });
 
-        function onButtonClicked(e) {
-          try {
-            var method = e.target.dataset.method;
-            player[method]();
-          }
-          catch (e) {
-            console.error('Oops', e);
-          }
-        }
+        player.play(); // <-- this one won't work, because the player is not ready yet
 
-        player.addEventListener('apiready', function() {
-          console.log('player is ready to receive instructions');
-
-          document.querySelectorAll('button[data-method]')
-            .forEach(function (button) {
-              button.removeAttribute('disabled');
-              button.addEventListener('click', onButtonClicked, false);
-            });
-        });
+        // This one will work, but 'autoplay' parameter should be used instead.
+        // player.addEventListener('apiready', function() {
+        //   console.log('player is ready to receive instructions');
+        //   player.play();
+        // });
       }
     </script>
 
