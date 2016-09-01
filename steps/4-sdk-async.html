@@ -14,7 +14,6 @@
   </header>
   <main>
     <div id='player'></div>
-    <br>
 
     <script src='https://api.dmcdn.net/all.js' async></script>
     <script>
@@ -24,26 +23,18 @@
           width  : '560',
           height : '315',
           params : {
-            'autoplay' : false,
+            'autoplay' : true,
             'ui-theme' : 'light',
             'ui-logo'  : false,
           }
         });
-
-        player.play(); // <-- this one won't work, because the player is not ready yet
-
-        // This one will work, but 'autoplay' parameter should be used instead.
-        // player.addEventListener('apiready', function() {
-        //   console.log('player is ready to receive instructions');
-        //   player.play();
-        // });
       }
     </script>
 
     <h2>Resources</h2>
     <ul>
       <li><a target="_blank" href="http://www.dailymotion.com/video/x4r5udv">Video : Midnight Sun | Iceland</a></li>
-      <li><a target="_blank" href="http://www.dailymotion.com/video/x4th35g">Video : Paris Sunset | Timelapse (Public Domain)-HD </a></li>
+      <li><a target="_blank" href="http://www.dailymotion.com/video/x4th35g">Video : Paris Sunset - Timelapse (Public Domain)-HD </a></li>
       <li><a target="_blank" href="https://www.dailymotion.com/settings/playercustomization">Settings | Player customization</a></li>
       <li><a target="_blank" href="https://developer.dailymotion.com/player#player-parameters">Developper Doc | Player Parameters</a></li>
       <li><a target="_blank" href="https://developer.dailymotion.com/player#player-api">Developper Doc | Player API</a></li>
