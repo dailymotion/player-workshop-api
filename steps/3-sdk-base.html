@@ -15,20 +15,18 @@
   <main>
     <div id='player'></div>
 
-    <script src='https://api.dmcdn.net/all.js' async></script>
+    <script src='https://api.dmcdn.net/all.js'></script>
     <script>
-      window.dmAsyncInit = function() {
-        var player = DM.player(document.getElementById('player'), {
-          video  : 'x4th35g',
-          width  : '560',
-          height : '315',
-          params : {
-            'autoplay' : true,
-            'ui-theme' : 'light',
-            'ui-logo'  : false,
-          }
-        });
-      }
+      var player = DM.player(document.getElementById('player'), {
+        video  : 'x4th35g',
+        width  : '560',
+        height : '315',
+        params : {
+          'autoplay'     : true,
+          'ui-highlight' : '#32288c',
+          'ui-logo'      : true,
+        }
+      });
     </script>
 
     <h2>Resources</h2>
