@@ -17,7 +17,7 @@
     <br>
     <button disabled data-method="play">play</button>
     <button disabled data-method="pause">pause</button>
-    <p>Load another video (<label><input type="checkbox" name="autoplay" id="autoplay"> Autoplay?</label>):</p>
+    <p>Load another video:</p>
     <ul>
       <li><button disabled data-method="load" data-vid="x4r5udv">Midnight Sun | Iceland</button></li>
       <li><button disabled data-method="load" data-vid="x4th35g">Paris Sunset | Timelapse (Public Domain)-HD</button></li>
@@ -27,10 +27,10 @@
     <script>
       window.dmAsyncInit = function() {
         var player = DM.player(document.getElementById('player'), {
-          video  : 'x4th35g',
-          width  : '560',
-          height : '315',
-          params : {
+          video: 'x4th35g',
+          width: '560',
+          height: '315',
+          params: {
             'autoplay' : true,
             'ui-theme' : 'light',
             'ui-logo'  : false,
@@ -39,10 +39,8 @@
 
         function onButtonClicked(e) {
           try {
-            var method = e.target.dataset.method;
-            var params = (method === 'load') ? [e.target.dataset.vid, {
-              autoplay: document.getElementById('autoplay').checked
-            }] : [];
+            var method = e.target.dataset.method
+            var params = (method === 'load') ? [e.target.dataset.vid] : [];
             player[method](...params);
           }
           catch (e) {
