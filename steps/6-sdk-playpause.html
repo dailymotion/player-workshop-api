@@ -17,11 +17,6 @@
     <br>
     <button disabled data-method="play">play</button>
     <button disabled data-method="pause">pause</button>
-    <p>Load another video:</p>
-    <ul>
-      <li><button disabled data-method="load" data-vid="x4r5udv">Midnight Sun | Iceland</button></li>
-      <li><button disabled data-method="load" data-vid="x4th35g">Paris Sunset | Timelapse (Public Domain)-HD</button></li>
-    </ul>
 
     <script src='https://api.dmcdn.net/all.js' async></script>
     <script>
@@ -39,9 +34,8 @@
 
         function onButtonClicked(e) {
           try {
-            var method = e.target.dataset.method
-            var params = (method === 'load') ? [e.target.dataset.vid] : [];
-            player[method](...params);
+            var method = e.target.dataset.method;
+            player[method]();
           }
           catch (e) {
             console.error('Oops', e);
