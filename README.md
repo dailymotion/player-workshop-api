@@ -1,4 +1,4 @@
-# dailymotion player workshop (Internal Use Only)
+# dailymotion player workshop
 
 Base material for a workshop to introduce the player API.
 
