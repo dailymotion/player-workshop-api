@@ -1,18 +1,18 @@
-
 body {
-  font-family: hindlight,Helvetica,Arial,Sans-serif;
+  font-family: Retina,Arial,Sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: hindbold,Helvetica,Arial,Sans-serif;
+  font-family: Retina,Arial,Sans-serif;
   font-weight: bold;
 }
 
 header {
-  background-color: #0066DC;
+  background-color: #00AAFF;
+  background : linear-gradient(45deg, #00AAFF, #00D2F3);
   color: #fff;
 }
 
